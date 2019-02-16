@@ -1,7 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Project authors</Authors>
+    <Company>Project company</Company>
+    <Product>Project product</Product>
+    <Description>A sample project with dependencies</Description>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

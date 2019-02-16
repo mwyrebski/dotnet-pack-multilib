@@ -26,4 +26,22 @@ NuGet package. The simplest way of generating it can be:
     dotnet build
     nuget.exe pack MultiLib.Project\MultiLib.Project.csproj -IncludeReferencedProjects
 
+Using NuSpec files
+------------------
 
+It is possible to define common manifest information using predefined [nuspec
+file](https://docs.microsoft.com/en-us/nuget/reference/nuspec).
+
+See local example: [MultiLib.Project.nuspec](./MultiLib.Project.nuspec)
+
+Unfortunately, most of information will be hard-coded in this file but using
+variables like `$version$` or `$configuration$` helps a little. Assemblies
+which should be included in the NuGet package can be specified under `<files>`
+tag.
+
+Creating a package with nuspec file is simple:
+
+    dotnet build -c Release -p:Version=1.5.6
+    nuget pack MultiLib.Project.nuspec -Version 1.5.6 -Properties Configuration=Release
+
+Providing parameters (like "Version") will overwrite values from project files.

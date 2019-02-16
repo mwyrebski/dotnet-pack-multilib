@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>MultiLib.Project</id>
+    <version>$version$</version>
+    <title>MultiLibrary Project</title>
+    <authors>Project Authors</authors>
+    <owners>Project Owners</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A sample project with dependencies</description>
+    <dependencies />
+  </metadata>
+  <files>
+    <file src="MultiLib.Project\bin\$configuration$\netstandard2.0\MultiLib.Project.dll" target="lib/netstandard2.0" />
+    <file src="MultiLib.Project\bin\$configuration$\netstandard2.0\MultiLib.Dependency1.dll" target="lib/netstandard2.0" />
+    <file src="MultiLib.Project\bin\$configuration$\netstandard2.0\MultiLib.Dependency2.dll" target="lib/netstandard2.0" />
+  </files>
+</package>
